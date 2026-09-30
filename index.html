@@ -8,6 +8,8 @@
   :root { color-scheme: light dark; }
   body { font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 680px; margin: 0 auto; padding: 48px 20px; }
   h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 19px; margin-top: 28px; }
+  li { margin-bottom: 6px; }
   .muted { opacity: .7; }
   a { color: #2f7de1; }
 </style>
@@ -16,7 +18,15 @@
   <h1>coleholden_ upload tool</h1>
   <p class="muted">A private tool for the YouTube channel <a href="https://www.youtube.com/@coleholden_">@coleholden_</a></p>
   <p>This tool is used only by the channel owner, Cole Holden. It uploads videos he produces to his own YouTube channel and reads that channel's analytics. It is not offered to other users and never accesses anyone else's account or data.</p>
-  <p>It uses YouTube API Services. See the <a href="privacy.html">privacy policy</a>.</p>
+  <h2>How it works</h2>
+  <ol>
+    <li>The owner produces an original video on his own computer (animated charts built from market data, with scripted narration).</li>
+    <li>The owner signs in once with Google (OAuth 2.0) and grants the tool access to his own channel only.</li>
+    <li>The tool uploads the finished video to the owner's channel with <code>videos.insert</code>, and posts the owner's first comment with <code>commentThreads.insert</code>.</li>
+    <li>The tool reads the channel's own analytics (views, audience retention) to decide which formats to make next.</li>
+  </ol>
+  <p>There is no public sign-up, and no other user's data is ever accessed.</p>
+  <p>It uses YouTube API Services. See the <a href="privacy.html">privacy policy</a> and <a href="terms.html">terms of service</a>.</p>
   <p class="muted">Contact: coleholden@gmail.com</p>
 </body>
 </html>
